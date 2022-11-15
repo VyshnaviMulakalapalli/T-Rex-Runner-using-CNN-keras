@@ -38,21 +38,21 @@ Lead author – Prasanna    Reviewer – Vyshnavi
 
 * python 2.6 or 2.7 
 
-* Numpy (pip install numpy) 
+* Numpy (pip install numpy) - NumPy is a Python library used for working with arrays. 
 
-* Sklearn 
+* Sklearn - It provides a selection of efficient tools for machine learning and statistical modeling including classification, regression, clustering and dimensionality reduction via a consistence interface in Python.
 
-* Seaborn 
+* Seaborn (pip install seaborn) - Seaborn is a Python visualization library based on matplotlib. 
 
-* keyboard (pip install keyboard) 
+* keyboard (pip install keyboard) - It helps to enter keys, record the keyboard activities and block the keys until a specified key is entered and simulate the keys.
 
-* uuid (pip install uuid) 
+* uuid (pip install uuid) - UUID, Universal Unique Identifier, is a python library which helps in generating random objects of 128 bits as ids.
 
 * time  
 
-* glob
+* glob - In Python, the glob module is used to retrieve files/pathname matching a specified pattern.
 
-* keras.models, keras.layers for CNN  
+* keras (pip install keras) - It is used to make the implementation of neural networks easy. It also supports multiple backend neural network computation.
 
 * sequential 
 
