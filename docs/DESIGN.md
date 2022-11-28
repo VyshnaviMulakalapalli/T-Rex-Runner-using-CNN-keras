@@ -43,7 +43,7 @@
 3. Include appropriate references that describe the field, key concepts, and techniques
 
 * [1]. Batuhan UZUN, 2021 "Trex-CNN". https://github.com/uzunb/Trex-CNN
- 
+
 * [2]. Nitin Rai, 2019 "Chrome-dino-game-bot". https://github.com/imneonizer/Chrome-dino-game-bot
 
 #### Development approach
@@ -63,3 +63,5 @@
   * Sklearn - It provides a selection of efficient tools for machine learning and statistical modeling including classification, regression, clustering and dimensionality reduction via a consistence interface in Python.
   * Seaborn - Seaborn is a library for making statistical graphics in Python. It builds on top of matplotlib and integrates closely with pandas data structures. Seaborn helps you explore and understand your data.
 
+
+ 
