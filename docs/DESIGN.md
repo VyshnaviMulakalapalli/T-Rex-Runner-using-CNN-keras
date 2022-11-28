@@ -46,7 +46,8 @@
 
 * [2]. Nitin Rai, 2019 "Chrome-dino-game-bot". https://github.com/imneonizer/Chrome-dino-game-bot
 
-#### Development approach
+
+### Development approach
 
 1. What tools, platforms, APIs, libraries, datasets are available and needed to develop the AI system?
 
@@ -64,4 +65,52 @@
   * Seaborn - Seaborn is a library for making statistical graphics in Python. It builds on top of matplotlib and integrates closely with pandas data structures. Seaborn helps you explore and understand your data.
 
 
- 
+### Working Example
+
+1. What example is a technically sound illustration of the AI system?
+
+The player controls a running dinosaur by pressing ↑ (to jump) or ↓ (to crouch) to avoid obstacles, including cacti and pterodactyls. Pressing buttons to jump for different amounts of time will result in differently heighted jumps. Pressing ↓ while in the air will cause the dinosaur to fall faster.
+
+When the player reaches 700 points the game begins to switch between day (white background, black lines and shapes) and night (black background, white lines and shapes).Reaching a score of 900 will switch the color scheme back to day, and the switch back and forth will occur at further subsequent milestones.
+
+
+
+### Discussion and Evaluation
+
+1. What are the considerations for developing a safe and trustworthy AI?
+
+* AI systems should support human autonomy and decision-making.  
+
+* AI system creators should be able to provide evidence of the effectiveness and fitness of the purpose of the system.  
+
+* The AI system shall adhere to the knowledge and skill required for safe and effective operation. 
+
+* The AI system shall be created and operated to provide an unambiguous rationale for all decisions made.  
+
+* The basis of a particular AI system decision should always be discoverable. 
+
+* Look across the AI system lifecycle and make sure that portions that interact with data, metadata and models are secured and maintain data privacy as required. 
+
+* Examine training data sets for sources of potential bias and make sure that communities are represented in a fair and equitable way. 
+
+2. What are the ethical considerations in determining the legitimate use of the AI system?
+
+The legal and ethical issues that confront society due to Artificial Intelligence (AI) include 	privacy and Transparency, Technical safety and Bias in Data, Training Sets, etc. 
+
+**Technical Safety** 
+
+The first question for any technology is whether it works as intended. Will AI systems work as they are promised, or will they fail? When they fail, what will be the results of those failures? And if we are dependent upon them, will we be able to survive without them?
+
+**Transparency and Privacy** 
+
+Once we have determined that the technology functions adequately, can we understand how it works and properly gather data on its functioning? Ethical analysis always depends on getting the facts first-only then can evaluation begin. 
+
+**Bias in Data, Training Sets, etc.** 
+
+Algorithmic bias is one of the major concerns in AI right now and will remain so in the future unless we endeavor to make our technological products better than we are. 
+
+**Automating Ethics** 
+
+One strength of AI is that it can automate decision-making, thus lowering the burden on humans and speeding up - potentially greatly speeding up—some kinds of decision-making processes. However, this automation of decision-making will present huge problems for society, because if these automated decisions are good, society will benefit, but if they are bad, society will be harmed. 
+
+
