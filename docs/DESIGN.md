@@ -23,6 +23,7 @@
 
 
 3. What specifically you'll focus on? What's the overall guiding question your study will pursue?
+* This project mainly focus on decision making. The distance between T-Rex dino and obstacle should be considered while performing key operations. Also the height at which T-Rex dino should fly needs to be considered. 
 * In this game, the player controls a dinosaur and accumulates points by jumping over obstacles.
 * The controls are simple – press the space bar or the up arrow to jump up or press the down arrow to duck. 
 
@@ -33,10 +34,14 @@
 * T-Rex-Runner uses a `Convolutional Neural Network(CNN)` that takes an input of the game screen and outputs whether it should or should not jump at that specific moment.
 * It can capture the screen, evaluate it, and output its calculations in real time to play the game. 
 
-
+    
 2. What are the key concepts and techniques that the AI system is based on?  
 
-* It collects the dataset when playing, trains with the obtained dataset and then it plays the game.
+* T-Rex-Runner uses a `Convolutional Neural Network(CNN)` to implement the CNN model, we will do these in order:
+
+    * Firstly, we are going to create a dataset by playing the game for a while.
+    * To create a dataset, we are going to grab the screen while playing the game and recorde which key was pressed at that moment.
+    * After the dataset is created, we are going to train a classification model which is prepared using CNN.
 * We need to specify the ROI (Region of Interest) according to screen resolution. We need to change limits (width and height) for the specified ROI.
 * When each press direction buttons, it saves ROI pixels by taking the screenshot using mss (multiple screenshot module). 
 
