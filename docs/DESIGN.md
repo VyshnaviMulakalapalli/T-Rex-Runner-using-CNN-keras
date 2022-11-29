@@ -1,4 +1,3 @@
-
 ## Project Design
  Created: 22 Nov 2022  
  Updated: 28 Nov 2022
@@ -23,14 +22,20 @@
 
 
 3. What specifically you'll focus on? What's the overall guiding question your study will pursue?
+
 * In this game, the player controls a dinosaur and accumulates points by jumping over obstacles.
-* The controls are simple – press the space bar or the up arrow to jump up or press the down arrow to duck. 
+* The controls are simple – press the space bar or the up arrow to jump up or press the down arrow to duck.
+* All the moves will be recorded and each move is focussed on:
+  * What is the current speed of T-Rex?
+  * What is the distance until the next obstacle?
+  * What is the width, height and altitude of this obstacle?
+  * Whether you jumped or not.
 
 ### Theoretical Background
 
 1. What areas or fields of AI provide the theoretical framework of the AI system?   
 
-* T-Rex-Runner uses a `Convolutional Neural Network(CNN)` that takes an input of the game screen and outputs whether it should or should not jump at that specific moment.
+* T-Rex-Runner uses a `Convolutional Neural Network(CNN) - Keras` that takes an input of the game screen and outputs whether it should or should not jump at that specific moment.
 * It can capture the screen, evaluate it, and output its calculations in real time to play the game. 
 
 
@@ -45,6 +50,10 @@
 * [1]. Batuhan UZUN, 2021 "Trex-CNN". https://github.com/uzunb/Trex-CNN
 
 * [2]. Nitin Rai, 2019 "Chrome-dino-game-bot". https://github.com/imneonizer/Chrome-dino-game-bot
+
+* [3]. Ferhat Tas, 2021 "Create an AI to Play Chrome Dino Game with CNN". https://medium.com/analytics-vidhya/create-an-ai-to-play-chrome-dino-game-with-cnn-b769e58bb14c
+
+* [4]. Erol, 2020 "Trex Game with CNN". https://dev.to/erol/trex-game-with-cnn-3j0h
 
 
 ### Development approach
