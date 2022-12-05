@@ -1,9 +1,12 @@
 ## Project Design
  Created: 22 Nov 2022  
- Updated: 28 Nov 2022
+ Updated: 05 Dec 2022
 
 ### Content and Organization
+
 #### Introduction  
+
+Author - Prasanna, Reviewer - Vyshnavi
 
 1. What AI system are you interested in investigating further?  
 
@@ -32,6 +35,8 @@
   * Whether you jumped or not.
 
 ### Theoretical Background
+
+Author - Prasanna, Reviewer - Vyshnavi
 
 1. What areas or fields of AI provide the theoretical framework of the AI system?   
 
@@ -62,6 +67,8 @@
 
 ### Development approach
 
+Author - Vyshnavi, Reviewer - Prasanna
+
 1. What tools, platforms, APIs, libraries, datasets are available and needed to develop the AI system?
 
 * A dataset should be created by playing the game manually. The dataset contains pixels of **`Region of Interest`** which will be specified by user according to their screen resolution.
@@ -77,8 +84,33 @@
   * Sklearn - It provides a selection of efficient tools for machine learning and statistical modeling including classification, regression, clustering and dimensionality reduction via a consistence interface in Python.
   * Seaborn - Seaborn is a library for making statistical graphics in Python. It builds on top of matplotlib and integrates closely with pandas data structures. Seaborn helps you explore and understand your data.
 
+**Getting the data**
+
+* First we should start with getting data. In order to do that, we need to import `keyboard` library to save the keyboard action. Then we need to import `mss` to record screen for the game.
+* mss library helps to cut off some areas in the screen by which the model can only focus on determined area.
+* We need to set the co-ordinates in order to cut off the area that we want the model to see only using mss.
+* A function should be defined for recording the screen. An exit function will be defined and whenever we want to exit in recording, we will press `esc` and then exit function will be called.
+
+**Training the CNN model**
+
+* A CNN model will be trained based on the data we got and the model predicts keyboard actions according to images.
+* We will apply `Label Encoding` and `One Hot Encoding` to get binary values for the labels UP, DOWN and RIGHT.
+* Then we need to split data for training and testing and then create a `Convolutional neural network` using relu and softmax activation functions and then train it.
+
+**Testing the model**
+
+* Model will be tested in the game as real-time.
+* Import the libraries.
+* Labels will be determined again because the model predicts images, we make it choose in this list according to output of the model.
+* Set up the sizes for the screen and load the model.
+* Apply resize and normalization.
+* argmax() is used to find the label maximum probability.
+* If the result is 0 it means DOWN, using keyboard library, model will press DOWN.
+* If the result is 2 it means UP, again using keyboard library model will press UP.
 
 ### Working Example
+
+Author - Vyshnavi, Reviewer - Prasanna
 
 1. What example is a technically sound illustration of the AI system?
 
@@ -89,6 +121,8 @@ When the player reaches 700 points the game begins to switch between day (white 
 
 
 ### Discussion and Evaluation
+
+Author - Vyshnavi, Reviewer - Prasanna
 
 1. What are the considerations for developing a safe and trustworthy AI?
 
