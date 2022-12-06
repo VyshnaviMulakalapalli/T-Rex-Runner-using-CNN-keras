@@ -18,16 +18,6 @@ from sklearn.preprocessing import LabelEncoder
 from sklearn.preprocessing import OneHotEncoder
 from sklearn.model_selection import train_test_split
 
-# Limit GPU memory usage
-# https://github.com/keras-team/keras/issues/1538#issuecomment-241975687
-"""
-import tensorflow as tf
-from keras.backend.tensorflow_backend import set_session
-config = tf.ConfigProto()
-config.gpu_options.per_process_gpu_memory_fraction = 0.7
-set_session(tf.Session(config=config))
-"""
-
 
 def onehot_labels(values):
     """
