@@ -9,7 +9,6 @@ import glob
 import os
 import random
 import numpy as np
-import keras
 from keras.models import Sequential
 from keras.layers import Dense, Dropout, Flatten
 from keras.layers import Conv2D, MaxPooling2D
@@ -42,17 +41,17 @@ def onehot_labels(values):
     return onehot_encoded
 
 
-imgs = glob.glob("./img/*.png")
+imgs = glob.glob("../data/*.png")
 
 width = 200
 height = 40
 
 X = []
 Y = []
-for img in imgs:
-    filename = os.path.basename(img)
+for data in imgs:
+    filename = os.path.basename(data)
     label = filename.split("_")[0]
-    im = np.array(Image.open(img).convert("L").resize((width, height)))
+    im = np.array(Image.open(data).convert("L").resize((width, height)))
     im = im / 255
     X.append(im)
     Y.append(label)
@@ -62,8 +61,8 @@ X = X.reshape(X.shape[0], width, height, 1)
 Y = onehot_labels(Y)
 
 train_X, test_X, train_y, test_y = train_test_split(X, Y, test_size=0.25,
-                                                    random_state=random.randint(
-                                                        112, 1112))
+                                                    random_state=random.randint
+                                                    (112, 1112))
 
 model = Sequential()
 model.add(Conv2D(32, kernel_size=(3, 3),
@@ -83,7 +82,7 @@ if os.path.exists("./trex_weight.h5"):
 
 print(model.summary())
 
-model.compile(loss='categorical_crossentropy', optimizer='SGD',
+model.compile(loss='sparse_categorical_crossentropy', optimizer='SGD',
               metrics=['accuracy'])
 
 model.fit(train_X, train_y, epochs=20, batch_size=64)
@@ -94,6 +93,6 @@ print("\n%s: %.2f%%" % (model.metrics_names[1], scores[1] * 100))
 scores = model.evaluate(test_X, test_y)
 print("\nTEST %s: %.2f%%" % (model.metrics_names[1], scores[1] * 100))
 
-# print(model.evaluate(X, Y))
+print(model.evaluate(X, Y))
 open("model.json", "w").write(model.to_json())
 model.save_weights('trex_weight.h5')
