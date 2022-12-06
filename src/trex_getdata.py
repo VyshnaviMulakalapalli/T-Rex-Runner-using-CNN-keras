@@ -1,3 +1,11 @@
+"""
+File: trex_getdata.py
+Purpose: Collects data for team project
+Author: Vyshnavi Mulakalapalli
+Created: Dec 05, 2022
+Updated: Dec 05, 2022
+"""
+
 import keyboard
 import os
 import uuid
