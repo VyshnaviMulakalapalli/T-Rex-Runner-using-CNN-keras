@@ -1,5 +1,5 @@
 ## Clone the project:
-* Clone the project into your local machine from Github source :` https://github.com/kittinan/trex-keras-cnn`
+* Clone the project into your local machine from Github source :` https://github.com/2022-fall-comp-741-841/prasanna-vyshnavi`
 
 ## Setting-up virtual environment:
 * Open the project folder in PyCharm after cloning in local machine.
@@ -13,3 +13,4 @@
 
 ## Install Requirements:
 * Install all the packages,modules and other dependencies using `pip install -r requirements.txt`.
+
