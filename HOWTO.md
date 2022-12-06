@@ -1,3 +1,5 @@
+# HOWTO
+
 ## Clone the project:
 * Clone the project into your local machine from Github source :` https://github.com/2022-fall-comp-741-841/prasanna-vyshnavi`
 
@@ -14,3 +16,6 @@
 ## Install Requirements:
 * Install all the packages,modules and other dependencies using `pip install -r requirements.txt`.
 
+## Project structure development:
+* Create `docs` folder and in that create 2 markdown files : `DESIGN.md`, `PROPOSAL.md` .
+* Create src folder with `trex_play.py`, `trex_train.py`, `trex_getdata.py`.
