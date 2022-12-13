@@ -3,7 +3,7 @@ File: trex_getdata.py
 Purpose: Collects data for team project
 Author: Vyshnavi Mulakalapalli
 Created: Dec 05, 2022
-Updated: Dec 05, 2022
+Updated: Dec 13, 2022
 """
 import uuid
 import time
@@ -20,15 +20,18 @@ COUNTER = 0
 
 
 def record_screen(record_id1, key):
-    """Records screen in the game."""
+    """
+    Records screens in the game and saves images into data folder.
+
+    record_id1: uuid generated when a key is pressed.
+    key: the keyboard action, for example UP, RIGHT or DOWN.
+    """
     global COUNTER
     COUNTER += 1
     print(f"{key}: {COUNTER}")
-    # print("{}: {}".format(key, COUNTER))
     data = sct.grab(mon)
     im_dt = Image.frombytes('RGB', data.size, data.rgb)
     im_dt.save(f"../data/{key}_{record_id1}_{COUNTER}.png")
-    # im_dt.save("../data/{}_{}_{}.png".format(key, record_id1, COUNTER))
 
 
 IS_EXIT = False
