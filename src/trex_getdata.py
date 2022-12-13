@@ -5,38 +5,39 @@ Author: Vyshnavi Mulakalapalli
 Created: Dec 05, 2022
 Updated: Dec 05, 2022
 """
-
-import keyboard
-import os
 import uuid
+import time
+import keyboard
+# import os
 from mss import mss
 from PIL import Image
-import time
-import sys
+# import sys
 
 mon = {'top': 350, 'left': 625, 'width': 650, 'height': 130}
 sct = mss()
 
-counter = 0
+COUNTER = 0
 
 
 def record_screen(record_id1, key):
     """Records screen in the game."""
-    global counter
-    counter += 1
-    print("{}: {}".format(key, counter))
+    global COUNTER
+    COUNTER += 1
+    print(f"{key}: {COUNTER}")
+    # print("{}: {}".format(key, COUNTER))
     data = sct.grab(mon)
-    im = Image.frombytes('RGB', data.size, data.rgb)
-    im.save("../data/{}_{}_{}.png".format(key, record_id1, counter))
+    im_dt = Image.frombytes('RGB', data.size, data.rgb)
+    im_dt.save(f"../data/{key}_{record_id1}_{COUNTER}.png")
+    # im_dt.save("../data/{}_{}_{}.png".format(key, record_id1, COUNTER))
 
 
-is_exit = False
+IS_EXIT = False
 
 
 def exit1():
     """Stops collection of data."""
-    global is_exit
-    is_exit = True
+    global IS_EXIT
+    IS_EXIT = True
 
 
 keyboard.add_hotkey("esc", exit1)
@@ -44,7 +45,7 @@ keyboard.add_hotkey("esc", exit1)
 record_id = uuid.uuid4()
 while True:
 
-    if is_exit:
+    if IS_EXIT:
         break
 
     try:
