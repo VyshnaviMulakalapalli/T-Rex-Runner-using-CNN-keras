@@ -43,21 +43,21 @@ def onehot_labels(values):
 
 imgs = glob.glob("../data/*.png")
 
-width = 200
-height = 40
+WIDTH = 200
+HEIGHT = 40
 
 X = []
 Y = []
 for data in imgs:
     filename = os.path.basename(data)
     label = filename.split("_")[0]
-    im = np.array(Image.open(data).convert("L").resize((width, height)))
+    im = np.array(Image.open(data).convert("L").resize((WIDTH, HEIGHT)))
     im = im / 255
     X.append(im)
     Y.append(label)
 
 X = np.array(X)
-X = X.reshape(X.shape[0], width, height, 1)
+X = X.reshape(X.shape[0], WIDTH, HEIGHT, 1)
 Y = onehot_labels(Y)
 
 train_X, test_X, train_y, test_y = train_test_split(X, Y, test_size=0.25,
@@ -67,7 +67,7 @@ train_X, test_X, train_y, test_y = train_test_split(X, Y, test_size=0.25,
 model = Sequential()
 model.add(Conv2D(32, kernel_size=(3, 3),
                  activation='relu',
-                 input_shape=(width, height, 1)))
+                 input_shape=(WIDTH, HEIGHT, 1)))
 model.add(Conv2D(64, (3, 3), activation='relu'))
 model.add(MaxPooling2D(pool_size=(2, 2)))
 model.add(Dropout(0.25))
@@ -94,5 +94,7 @@ scores = model.evaluate(test_X, test_y)
 print("\nTEST %s: %.2f%%" % (model.metrics_names[1], scores[1] * 100))
 
 print(model.evaluate(X, Y))
-open("model.json", "w").write(model.to_json())
+with open("model.json", "w", encoding='utf8') as file:
+    file.write(model.to_json())
+# open("model.json", "w", encoding='utf8').write(model.to_json())
 model.save_weights('trex_weight.h5')
