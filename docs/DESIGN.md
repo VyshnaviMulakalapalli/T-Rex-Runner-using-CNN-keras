@@ -49,7 +49,7 @@ Author - Prasanna, Reviewer - Vyshnavi
 * T-Rex-Runner uses a `Convolutional Neural Network(CNN)` to implement the CNN model, we will do these in order:
 
     * Firstly, we are going to create a dataset by playing the game for a while.
-    * To create a dataset, we are going to grab the screen while playing the game and recorde which key was pressed at that moment.
+    * To create a dataset, we are going to grab the screen while playing the game and record which key was pressed at that moment.
     * After the dataset is created, we are going to train a classification model which is prepared using CNN.
 * We need to specify the ROI (Region of Interest) according to screen resolution. We need to change limits (width and height) for the specified ROI.
 * When each press direction buttons, it saves ROI pixels by taking the screenshot using mss (multiple screenshot module). 
@@ -63,6 +63,10 @@ Author - Prasanna, Reviewer - Vyshnavi
 * [3]. Ferhat Tas, 2021 "Create an AI to Play Chrome Dino Game with CNN". https://medium.com/analytics-vidhya/create-an-ai-to-play-chrome-dino-game-with-cnn-b769e58bb14c
 
 * [4]. Erol, 2020 "Trex Game with CNN". https://dev.to/erol/trex-game-with-cnn-3j0h
+
+* [5]. Valeti Dilip, 2021 “Convolutional Neural Network Using Keras" . https://medium.com/@dilip.voleti/convolutional-neural-network-using-keras-e8c5f4ff8a37.
+
+* [6]. Dabakoglu Caner, 2018 “What Is Convolutional Neural Network (CNN) ? — With Keras”. https://medium.com/@cdabakoglu/what-is-convolutional-neural-network-cnn-with-keras-cab447ad204c. 
 
 
 ### Development approach
@@ -104,7 +108,7 @@ Author - Vyshnavi, Reviewer - Prasanna
 * Labels will be determined again because the model predicts images, we make it choose in this list according to output of the model.
 * Set up the sizes for the screen and load the model.
 * Apply resize and normalization.
-* argmax() is used to find the label maximum probability.
+* `argmax()` is used to find the label maximum probability.
 * If the result is 0 it means DOWN, using keyboard library, model will press DOWN.
 * If the result is 2 it means UP, again using keyboard library model will press UP.
 
