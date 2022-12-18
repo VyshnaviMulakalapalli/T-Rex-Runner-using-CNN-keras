@@ -6,9 +6,9 @@
 ## Setting-up virtual environment:
 * Open the project folder in PyCharm after cloning in local machine.
 * In the status bar (at the bottom of the IDE window), click Python 3.10 and select Interpreter Settings.
-* Select Virtualenv Environment
-* Check off New environment
-* Location should be the path to your project folder
+* Select Virtualenv Environment.
+* Check off New environment.
+* Location should be the path to your project folder.
   * If the location is different, change it. 
   * Base interpreter should be Python 3.10 you have installed at the system level.
 * Now you can now see the .venv folder with Lib,Scripts sub folders in it under our project in our file structure.
@@ -16,6 +16,8 @@
 ## Install Requirements:
 * Install all the packages,modules and other dependencies using `pip install -r requirements.txt`.
 
-## Project structure development:
-* Create `docs` folder and in that create 2 markdown files : `DESIGN.md`, `PROPOSAL.md` .
-* Create src folder with `trex_play.py`, `trex_train.py`, `trex_getdata.py`.
+## Run the AI system:
+
+* Run `trex_getdata.py` by using `python trex_getdata.py`
+* Run `trex_train.py` by using `python trex_train.py`
+* Run `trex_play.py` by using `python trex_play.py`
