@@ -19,3 +19,5 @@
 ## Project structure development:
 * Create `docs` folder and in that create 2 markdown files : `DESIGN.md`, `PROPOSAL.md` .
 * Create src folder with `trex_play.py`, `trex_train.py`, `trex_getdata.py`.
+* After running the `trex_getdata.py` , play the T-rex runner by going to `https://www.trex-game.skipser.com/` while playing the game ,image screenshots are captured and stored in separate 
+ data folder which will be used dataset for training the T-rex dino.
